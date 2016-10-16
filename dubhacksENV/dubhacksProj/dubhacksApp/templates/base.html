@@ -11,21 +11,25 @@
 </head>
 
 <body>
-    <nav>
-        <a href="{% url 'women' %}">MyWebsite</a>
-        <a href="{% url 'hcde' %}">HCDE</a>
-        <a href="{% url 'cse' %}">CSE</a>
-        <a href="{% url 'info' %}">INFO</a>
-        <a href="{% url 'about' %}">About</a>
-    </nav>
-    <h1>{% block page_name %}{% endblock %}</h1>
-    {% block content %}
-    {% endblock %}
+    <div class="container">
+        <nav>
+            <a href="{% url 'women' %}">MyWebsite</a>
+            <a href="{% url 'hcde' %}">HCDE</a>
+            <a href="{% url 'cse' %}">CSE</a>
+            <a href="{% url 'info' %}">INFO</a>
+            <a href="{% url 'about' %}">About</a>
+        </nav>
+        <h1>{% block page_name %}{% endblock %}</h1>
+        {% block content %}
+        {% endblock %}
+    </div>
     <footer>
-    Made with <strong>love</strong> in Seattle.
-    <br>
-    Powered by Joshua's knowledge of Git and Sam's knowledge of Django.
-</footer>
+        <div class="container">
+            Made with <strong>love</strong> in Seattle.
+            <br>
+            Powered by Joshua's knowledge of Git and Sam's knowledge of Django.
+        </div>
+    </footer>
 </body>
 
 </html>
