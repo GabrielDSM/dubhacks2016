@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}{% endblock %}</title>
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'dubhacksApp/css/style.min.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'dubhacksApp/css/normalize.min.css' %}" />
-
-<title>{% block title %}{% endblock %}</title>
+<script src="{% static 'dubhacksApp/js/masonry.pkgd.min.js' %}"></script>
+<script src="https://use.typekit.net/djm1knd.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
 <body>
@@ -25,7 +27,7 @@
     </div>
     <footer>
         <div class="container">
-            Made with <strong>love</strong> in Seattle.
+            Made with <strong><a href="http://16f.dubhacks.co/">love</a></strong> in Seattle.
             <br>
             Powered by Joshua's knowledge of Git and Sam's knowledge of Django.
         </div>
