@@ -4,8 +4,10 @@ h1, h2, h3, h4, h5 {
 }
 
 $baseline: 4px;
+$black: #333333;
 
 body {
+    color: $black;
     font-family: "abril-text";
     font-size: 4 * $baseline;
     line-height: 1.5;
@@ -65,6 +67,7 @@ nav {
         line-height: 6 * $baseline;
 
         a {
+            color: $black;
             display: block;
             padding-top: 6 * $baseline;
             padding-right: 8 * $baseline;
@@ -76,4 +79,15 @@ nav {
 #logo {
     font-family: "brandon-grotesque";
     font-size: 6 * $baseline;
+}
+
+.row-grid#home {
+    padding-top: 20 * $baseline;
+}
+
+figcaption {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
 }
