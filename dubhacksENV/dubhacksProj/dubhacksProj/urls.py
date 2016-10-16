@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from dubhacksProj.views import women, hcde, cse, info, about
+from django.db import connection
+from dubhacksProj.views import women, hcde, cse, info, about, engineer
+
+cursor = connection.cursor()
+cursor.execute('SELECT Name, Major, Response1, Response2, Response3, Response4, Response5, Image FROM dubhacksapp_personentry')
+row = cursor.fetchall()
+list = []
+for x in row:
+    list.append(x[0])
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -25,5 +33,5 @@ urlpatterns = [
     url(r'^info/$', info, name='info'),
     url(r'^cse/$', cse, name='cse'),
     url(r'^about/$', about, name='about'),
-
+    url(r'^women/(\d{0,len(list)-1})$', engineer, name='engineer')
 ]

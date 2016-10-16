@@ -27,4 +27,15 @@ def cse(request):
 	return render(request, 'major.html', {'page_name': 'Computer Science & Engineering','result': row, 'major_description': 'Fusce id fermentum orci. Donec rutrum erat id arcu convallis suscipit. Proin eu neque quis lectus placerat volutpat non ut libero. Nunc laoreet consectetur nunc sed molestie. Sed gravida feugiat magna nec euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla ac nulla nisi. Curabitur pharetra eget sapien vel imperdiet.'})
 
 def about(request):
-    return render(request, 'major.html', {'page_name': 'About'})
+	return render(request, 'major.html', {'page_name': 'About'})
+
+
+def engineer(request, person):
+	cursor = connection.cursor()
+	cursor.execute('SELECT Name, Major, Response1, Response2, Response3, Response4, Response5, Image FROM dubhacksapp_personentry')
+	row = cursor.fetchall()
+	list = []
+	for x in row:
+		list.append(x[0])
+	print (list)
+	return render(request, 'engineer.html', {})
