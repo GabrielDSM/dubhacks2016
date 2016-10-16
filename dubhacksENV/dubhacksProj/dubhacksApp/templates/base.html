@@ -35,8 +35,10 @@
         </nav>
     </header>
 
-    {% block content %}
-        {% block grid %}
+    {% block general %}
+    {% endblock %}
+
+    {% block grid %}
         <div class="container">
 
 
@@ -119,11 +121,6 @@
 
                 {% endfor %}
             </div>
-
-
-
-        {% endblock %}
-
 
 
 

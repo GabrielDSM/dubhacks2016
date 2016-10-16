@@ -3,7 +3,7 @@
 
 {% block title %}{% endblock %}
 
-{% block content %}
+{% block general %}
 
     <div class="container">
         <div class="row page-description">
@@ -19,28 +19,4 @@
         </div>
     </div>
 
-    {% block grid %}
-    <div class="container">
-        <div class="row row-grid">
-            <div class="col-xs-3">
-                <figure class="portrait">
-                    <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-                    <figcaption>
-                        <h2>Name</h2>
-                        <p>Major</p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-        </div>
-    </div>
-    {% endblock %}
 {% endblock %}
