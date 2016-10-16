@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from django.db import connection
+
 def women(request):
     return render(request, 'women.html', {'page_name': 'Women'})
 
