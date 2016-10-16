@@ -7,10 +7,15 @@ $baseline: 4px;
 $black: #333333;
 
 body {
-    color: $black;
+    background-color: #fff;
+    color: #333;
     font-family: "abril-text";
     font-size: 4 * $baseline;
     line-height: 1.5;
+}
+
+a {
+    color: #333;
 }
 
 footer, h1, h2, h3 {
