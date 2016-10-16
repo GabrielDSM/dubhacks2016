@@ -1,5 +1,5 @@
 from django.http import HttpResponse, Http404
 import datetime
 
-def landing_page(request):
+def women(request):
 	return HttpResponse("Placeholder text for landing page")
