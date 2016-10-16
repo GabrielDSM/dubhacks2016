@@ -33,5 +33,8 @@ urlpatterns = [
     url(r'^info/$', info, name='info'),
     url(r'^cse/$', cse, name='cse'),
     url(r'^about/$', about, name='about'),
-    url(r'^women/(\d{0,99})/$', engineer)
+    url(r'^women/(\d{0})/$', engineer, name='person0'),
+    url(r'^women/(\d{1})/$', engineer, name='person1'),
+    url(r'^women/(\d{2})/$', engineer, name='person2'),
+    #url(r'^women/(\d{0,99})/$', engineer)
 ]
