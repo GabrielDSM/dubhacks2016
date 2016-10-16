@@ -11,29 +11,122 @@
 <script src="https://use.typekit.net/djm1knd.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
-    <nav>
-        <div class="container">
-            <div class="row">
+<body>
+    <header>
+        <nav>
+            <div class="row text-center">
                 <div class="col-xs-12">
-                    <ul>
-                        <div class="pull-left">
-                            <li id="logo"><a href="{% url 'women' %}">Logo</a></li>
-                        </div>
-                        <div class="pull-right">
+                    <span id="logo"><a href="{% url 'women' %}">Logo</a></span>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul>
                             <li><a href="{% url 'hcde' %}">HCDE</a></li>
                             <li><a href="{% url 'cse' %}">CSE</a></li>
                             <li><a href="{% url 'info' %}">INFO</a></li>
                             <li><a href="{% url 'about' %}">About</a></li>
-                        </div>
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     {% block content %}
         {% block grid %}
+        <div class="container">
+
+
+
+            {% for personentry in result %}
+            <div class="row row-grid visible-xs-block">
+                <div class="col-xs-12">
+                    <div class="portrait">
+                        <figure>
+                            <img src="{% static 'dubhacksApp/images/' %}{{personentry.2}}" alt="{{personentry.0}}" class="img-responsive">
+                            <figcaption>
+                                <h2>{{personentry.0}}</h2>
+                                <span class="major">{{personentry.1}}</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            <div class="row row-grid visible-sm-block">
+                {% for personentry in result %}
+                <div class="col-sm-6">
+                    <div class="portrait">
+                        <figure>
+                            <img src="{% static 'dubhacksApp/images/' %}{{personentry.2}}" alt="{{personentry.0}}" class="img-responsive">
+                            <figcaption>
+                                <h2>{{personentry.0}}</h2>
+                                <span class="major">{{personentry.1}}</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                {% if forloop.counter|divisibleby:"2" and not forloop.last %}
+            </div><div class="row row-grid visible-sm-block">
+                {% endif %}
+
+                {% endfor %}
+            </div>
+
+            <div class="row row-grid visible-md-block">
+                {% for personentry in result %}
+                <div class="col-md-4">
+                    <div class="portrait">
+                        <figure>
+                            <img src="{% static 'dubhacksApp/images/' %}{{personentry.2}}" alt="{{personentry.0}}" class="img-responsive">
+                            <figcaption>
+                                <h2>{{personentry.0}}</h2>
+                                <span class="major">{{personentry.1}}</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                {% if forloop.counter|divisibleby:"3" and not forloop.last %}
+            </div><div class="row row-grid visible-md-block">
+                {% endif %}
+
+                {% endfor %}
+            </div>
+
+            <div class="row row-grid visible-lg-block">
+                {% for personentry in result %}
+                <div class="col-lg-3">
+                    <div class="portrait">
+                        <figure>
+                            <img src="{% static 'dubhacksApp/images/' %}{{personentry.2}}" alt="{{personentry.0}}" class="img-responsive">
+                            <figcaption>
+                                <h2>{{personentry.0}}</h2>
+                                <span class="major">{{personentry.1}}</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                {% if forloop.counter|divisibleby:"4" and not forloop.last %}
+                </div><div class="row row-grid visible-lg-block">
+                {% endif %}
+
+                {% endfor %}
+            </div>
+
+
+
         {% endblock %}
+
+
+
+
     {% endblock %}
 
     <footer>
