@@ -8,11 +8,11 @@
 
 <body>
     <nav>
-        <a href="{% url 'women' %}">Website Title</a>
+        <a href="{% url 'women' %}">MyWebsite</a>
         <a href="{% url 'hcde' %}">HCDE</a>
-        <a href="cse">CSE</a>
-        <a href="info">INFO</a>
-        <a href="about">About</a>
+        <a href="{% url 'cse' %}">CSE</a>
+        <a href="{% url 'info' %}">INFO</a>
+        <a href="{% url 'about' %}">About</a>
     </nav>
     <h1>{% block page_name %}{% endblock %}</h1>
     {% block content %}

@@ -22,7 +22,7 @@ urlpatterns = [
     url(r'^$', women, name='women'),
     url(r'^women/$', women),
     url(r'^hcde/$', hcde, name='hcde'),
-    url(r'^info/$', info),
-    url(r'^cse/$', cse),
-    url(r'^about/$', about),
+    url(r'^info/$', info, name='info'),
+    url(r'^cse/$', cse, name='cse'),
+    url(r'^about/$', about, name='about'),
 ]
