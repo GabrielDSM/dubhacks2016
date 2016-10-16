@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from dubhacksProj.views import women
+from dubhacksProj.views import women, hcde, cse, info, about
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', women),
+    url(r'^$', women, name='women'),
     url(r'^women/$', women),
-    url(r'^hcde/$', hcde),
+    url(r'^hcde/$', hcde, name='hcde'),
     url(r'^info/$', info),
     url(r'^cse/$', cse),
+    url(r'^about/$', about),
 ]

@@ -8,13 +8,13 @@
 
 <body>
     <nav>
-        <a href="#">Website Title</a>
-        <a href="#">HCDE</a>
-        <a href="women">CSE</a>
-        <a href="#">INFO</a>
-        <a href="#">About</a>
+        <a href="{% url 'women' %}">Website Title</a>
+        <a href="{% url 'hcde' %}">HCDE</a>
+        <a href="cse">CSE</a>
+        <a href="info">INFO</a>
+        <a href="about">About</a>
     </nav>
-    <h1>General stuff</h1>
+    <h1>{% block page_name %}{% endblock %}</h1>
     {% block content %}
     {% endblock %}
     <footer>
