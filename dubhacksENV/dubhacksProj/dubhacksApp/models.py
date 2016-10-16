@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 
-class Woman(models.Model):
+class PersonEntry(models.Model):
 	name = models.CharField(max_length=45)
 	major = models.CharField(max_length=55)
 	response1 = models.TextField()
