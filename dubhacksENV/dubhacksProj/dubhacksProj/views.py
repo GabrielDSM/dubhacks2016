@@ -1,5 +1,5 @@
-from django.http import HttpResponse, Http404
-import datetime
+from django.shortcuts import render
 
 def women(request):
-	return HttpResponse("Placeholder text for landing page")
+    person = "Student"
+    return render(request, 'templates/women.html', {'name': person})
