@@ -24,7 +24,7 @@ row = cursor.fetchall()
 list = []
 for x in row:
     list.append(x[0])
-
+size = len(list) - 1
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', women, name='women'),
@@ -33,5 +33,5 @@ urlpatterns = [
     url(r'^info/$', info, name='info'),
     url(r'^cse/$', cse, name='cse'),
     url(r'^about/$', about, name='about'),
-    url(r'^women/(\d{0,len(list)-1})$', engineer, name='engineer')
+    url(r'^women/(\d{0,99})/$', engineer)
 ]

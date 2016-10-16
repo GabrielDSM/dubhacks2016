@@ -30,12 +30,26 @@ def about(request):
 	return render(request, 'major.html', {'page_name': 'About'})
 
 
-def engineer(request, person):
+def engineer(request, person_num):
+	person_num = int(person_num)
 	cursor = connection.cursor()
 	cursor.execute('SELECT Name, Major, Response1, Response2, Response3, Response4, Response5, Image FROM dubhacksapp_personentry')
 	row = cursor.fetchall()
-	list = []
+	name_list = []
+	major_list = []
+	r1_list = []
+	r2_list = []
+	r3_list = []
+	r4_list = []
+	r5_list = []
+	img_list = []
 	for x in row:
-		list.append(x[0])
-	print (list)
-	return render(request, 'engineer.html', {})
+		name_list.append(x[0])
+		major_list.append(x[1])
+		r1_list.append(x[2])
+		r2_list.append(x[3])
+		r3_list.append(x[4])
+		r4_list.append(x[5])
+		r5_list.append(x[6])
+		img_list.append(x[7])
+	return render(request, 'engineer.html', {'page_name': name_list[person_num], 'portrait_img': img_list[person_num], 'major_name': major_list[person_num], 'answer_one': r1_list[person_num], 'answer_two': r2_list[person_num], 'answer_three': r3_list[person_num]})
