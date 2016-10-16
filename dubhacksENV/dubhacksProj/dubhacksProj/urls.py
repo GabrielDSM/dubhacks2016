@@ -19,5 +19,9 @@ from dubhacksProj.views import women
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', women)
+    url(r'^$', women),
+    url(r'^women/$', women),
+    url(r'^hcde/$', hcde),
+    url(r'^info/$', info),
+    url(r'^cse/$', cse),
 ]
