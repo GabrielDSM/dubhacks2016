@@ -89,7 +89,7 @@
                 {% endfor %}
             </div>
 
-            <div class="row row-grid visible-md-block">
+            <div class="row row-grid">
                 {% for personentry in result %}
                 <div class="col-md-4">
                     <div class="portrait">
@@ -110,26 +110,7 @@
                 {% endfor %}
             </div>
 
-            <div class="row row-grid visible-lg-block">
-                {% for personentry in result %}
-                <div class="col-lg-3">
-                    <div class="portrait">
-                        <figure>
-                            <img src="{% static 'dubhacksApp/images/' %}{{personentry.2}}" alt="{{personentry.0}}" class="img-responsive">
-                            <figcaption>
-                                <h2>{{personentry.0}}</h2>
-                                <span class="major">{{personentry.1}}</span>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
 
-                {% if forloop.counter|divisibleby:"4" and not forloop.last %}
-                </div><div class="row row-grid visible-lg-block">
-                {% endif %}
-
-                {% endfor %}
-            </div>
 
 
 

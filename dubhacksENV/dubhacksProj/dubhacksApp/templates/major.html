@@ -21,7 +21,28 @@
 {% endblock %}
 
 {% block grid-title %}
-    <h2 id="grid-title">Women in {{ page_name }}</h2>
+    <br>
+    <br>
+    <h2>Women in {{ page_name }}</h2>
+    <br>
+{% endblock %}
+
+{% block grid %}
+<div class="container container-grid">
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4">
+            <div class="portrait">
+                <figure>
+                    <img src="{% static 'dubhacksApp/images/' %}{{ result.0.2}}" alt="{{personentry.0}}" class="img-responsive">
+                    <figcaption>
+                        <h2>{{result.0.0}}</h2>
+                        <span class="major">{{result.0.1}}</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block calltoaction %}

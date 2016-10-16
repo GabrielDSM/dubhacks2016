@@ -24,7 +24,7 @@ def cse(request):
 	cursor = connection.cursor()
 	cursor.execute('SELECT Name, Major, Image FROM dubhacksapp_personentry WHERE Major LIKE "Computer Science & Engineering"')
 	row = cursor.fetchall()
-	return render(request, 'major.html', {'page_name': 'Computer Science & Engineering','result': row, 'major_description': 'Fusce id fermentum orci. Donec rutrum erat id arcu convallis suscipit. Proin eu neque quis lectus placerat volutpat non ut libero. Nunc laoreet consectetur nunc sed molestie. Sed gravida feugiat magna nec euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla ac nulla nisi. Curabitur pharetra eget sapien vel imperdiet.'})
+	return render(request, 'major.html', {'page_name': 'Computer Science & Engineering','result': row, 'major_description': 'Fusce id fermentum orci. Donec rutrum erat id arcu convallis suscipit. Proin eu neque quis lectus placerat volutpat non ut libero. Nunc laoreet consectetur nunc sed molestie. Sed gravida feugiat magna nec euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus.'})
 
 def about(request):
 	return render(request, 'major.html', {'page_name': 'About'})
