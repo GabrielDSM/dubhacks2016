@@ -2,7 +2,6 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-# Create your models here.
 
 class Woman(models.Model):
 	name = models.CharField(max_length = 45)
@@ -12,7 +11,7 @@ class Woman(models.Model):
 	response3 = models.TextField()
 	response4 = models.TextField()
 	response5 = models.TextField()
-	# Add field for image, look into BLOB
+	image = models.ImageField()
 
 
 class Major(models.Model):
@@ -21,4 +20,8 @@ class Major(models.Model):
 	link = CharField(max_length = 34)
 
 
-		
+CREATE TABLE "women_info" (
+	"id" serial NOT NULL PRIMARY KEY,
+	"name" varchar(45) NOT NULL,
+	"major" varchar(55) NOT NULL,
+);
