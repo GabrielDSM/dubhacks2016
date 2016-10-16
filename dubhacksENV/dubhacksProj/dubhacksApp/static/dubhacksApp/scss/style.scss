@@ -25,10 +25,16 @@ footer, h1, h2, h3 {
 footer {
     padding-top: 12 * $baseline;
     padding-bottom: 12 * $baseline;
+
+    p {
+        font-size: 3.5 * $baseline;
+        margin-top: 2 * $baseline;
+        margin-bottom: 2 * $baseline;
+    }
 }
 
 h1, h2, h3 {
-    font-family: "brandon-grotesque";
+    font-family: 'brandon-grotesque', sans-serif;
 }
 
 h1 {
@@ -87,8 +93,12 @@ nav {
 }
 
 #logo {
+    a {
+        color: #651498;
+    }
+
     font-family: "brandon-grotesque";
-    font-size: 12 * $baseline;
+    font-size: 14 * $baseline;
     margin-bottom: 9 * $baseline;
 }
 
