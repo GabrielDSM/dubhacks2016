@@ -22,7 +22,7 @@ footer, h1, h2, h3 {
     text-align: center;
 }
 
-footer, .page-description {
+footer {
     padding-top: 12 * $baseline;
     padding-bottom: 12 * $baseline;
 }
@@ -60,14 +60,14 @@ p {
 }
 
 nav {
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
 
     ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
+        display: inline-block;
     }
 
     li {
@@ -77,9 +77,10 @@ nav {
         a {
             color: $black;
             display: block;
-            padding-right: 8 * $baseline;
-            padding-top: 14 * $baseline;
-            padding-bottom: 14 * $baseline;
+            padding-left: 4.5 * $baseline;
+            padding-right: 4.5 * $baseline;
+            padding-top: 2.5 * $baseline;
+            padding-bottom: 2.5 * $baseline;
             text-decoration: none;
         }
     }
@@ -88,6 +89,7 @@ nav {
 #logo {
     font-family: "brandon-grotesque";
     font-size: 12 * $baseline;
+    margin-bottom: 9 * $baseline;
 }
 
 .row-grid#home {
@@ -128,4 +130,23 @@ nav {
 
 .text-center {
     text-align: center;
+}
+
+hr {
+    border-style: dotted;
+    margin: 0;
+}
+
+header {
+    padding-top: 9 * $baseline;
+    padding-bottom: 9 * $baseline;
+}
+
+.container-grid {
+    padding-top: 9 * $baseline;
+    padding-bottom: 9 * $baseline;
+}
+
+a:hover {
+    text-decoration: none;
 }
