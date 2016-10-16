@@ -55,6 +55,7 @@ p {
 }
 
 nav {
+
     ul {
         list-style-type: none;
         margin: 0;
@@ -69,8 +70,9 @@ nav {
         a {
             color: $black;
             display: block;
-            padding-top: 6 * $baseline;
             padding-right: 8 * $baseline;
+            padding-top: 14 * $baseline;
+            padding-bottom: 14 * $baseline;
             text-decoration: none;
         }
     }
@@ -78,7 +80,7 @@ nav {
 
 #logo {
     font-family: "brandon-grotesque";
-    font-size: 6 * $baseline;
+    font-size: 8 * $baseline;
 }
 
 .row-grid#home {

@@ -16,11 +16,15 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ul>
-                        <li id="logo"><a href="{% url 'women' %}">MyWebsite</a></li>
-                        <li><a href="{% url 'hcde' %}">HCDE</a></li>
-                        <li><a href="{% url 'cse' %}">CSE</a></li>
-                        <li><a href="{% url 'info' %}">INFO</a></li>
-                        <li><a href="{% url 'about' %}">About</a></li>
+                        <div class="pull-left">
+                            <li id="logo"><a href="{% url 'women' %}">Logo</a></li>
+                        </div>
+                        <div class="pull-right">
+                            <li><a href="{% url 'hcde' %}">HCDE</a></li>
+                            <li><a href="{% url 'cse' %}">CSE</a></li>
+                            <li><a href="{% url 'info' %}">INFO</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                        </div>
                     </ul>
                 </div>
             </div>
