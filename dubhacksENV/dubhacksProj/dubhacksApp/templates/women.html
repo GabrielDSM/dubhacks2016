@@ -1,31 +1,51 @@
 {% extends "base.html" %}
-
-{% block title %}{% endblock %}
-
-{% block page_name %}{% endblock %}
+{% load static %}
 
 {% block content %}
-
-<div class="grid">
-  <div class="grid-item">...</div>
-  <div class="grid-item grid-item--width2">...</div>
-  <div class="grid-item">...</div>
-  ...
-</div>
-
-<script>
-var elem = document.querySelector('.grid');
-var msnry = new Masonry( elem, {
-  // options
-  itemSelector: '.grid-item',
-  columnWidth: 200
-});
-
-// element argument can be a selector string
-//   for an individual element
-var msnry = new Masonry( '.grid', {
-  // options
-});
-</script>
-
+    {% block grid %}
+    <div class="container">
+        <div class="row row-grid">
+            <div class="col-xs-3">
+                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
+            </div>
+            <div class="col-xs-3">
+                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
+            </div>
+            <div class="col-xs-3">
+                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
+            </div>
+            <div class="col-xs-3">
+                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
+            </div>
+        </div>
+        <div class="row row-grid">
+            <div class="col-xs-3">
+                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
+            </div>
+            <div class="col-xs-3">
+                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
+            </div>
+            <div class="col-xs-3">
+                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
+            </div>
+            <div class="col-xs-3">
+                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
+            </div>
+        </div>
+        <div class="row row-grid">
+            <div class="col-xs-3">
+                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
+            </div>
+            <div class="col-xs-3">
+                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
+            </div>
+            <div class="col-xs-3">
+                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
+            </div>
+            <div class="col-xs-3">
+                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
+            </div>
+        </div>
+    </div>
+    {% endblock %}
 {% endblock %}

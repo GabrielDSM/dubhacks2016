@@ -6,12 +6,6 @@ body {
     line-height: 1.5;
 }
 
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 40rem;
-}
-
 footer {
     text-align: center;
 }
@@ -41,4 +35,9 @@ h3 {
 p {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+}
+
+.row-grid {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }

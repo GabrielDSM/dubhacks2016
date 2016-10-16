@@ -5,32 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% block title %}{% endblock %}</title>
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'dubhacksApp/css/style.min.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'dubhacksApp/css/normalize.min.css' %}" />
-<script src="{% static 'dubhacksApp/js/masonry.pkgd.min.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'dubhacksApp/css/bootstrap.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'dubhacksApp/css/style.min.css' %}" />
 <script src="https://use.typekit.net/djm1knd.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <a href="{% url 'women' %}">MyWebsite</a>
-            <a href="{% url 'hcde' %}">HCDE</a>
-            <a href="{% url 'cse' %}">CSE</a>
-            <a href="{% url 'info' %}">INFO</a>
-            <a href="{% url 'about' %}">About</a>
-        </nav>
-        <h1>{% block page_name %}{% endblock %}</h1>
-        {% block content %}
+    <nav>
+        <a href="{% url 'women' %}">MyWebsite</a>
+        <a href="{% url 'hcde' %}">HCDE</a>
+        <a href="{% url 'cse' %}">CSE</a>
+        <a href="{% url 'info' %}">INFO</a>
+        <a href="{% url 'about' %}">About</a>
+    </nav>
+
+    {% block content %}
+        {% block grid %}
         {% endblock %}
-    </div>
+    {% endblock %}
+
     <footer>
-        <div class="container">
-            Made with <strong><a href="http://16f.dubhacks.co/">love</a></strong> in Seattle.
-            <br>
-            Powered by Joshua's knowledge of Git and Sam's knowledge of Django.
-        </div>
+        Made with <strong><a href="http://16f.dubhacks.co/">love</a></strong> in Seattle.
+        <br>
+        Powered by Joshua's knowledge of Git and Sam's knowledge of Django.
     </footer>
 </body>
 
