@@ -2,3 +2,16 @@
 {% load static %}
 
 {% block title %}{% endblock %}
+
+{% block general %}
+    {{ portrait_img }}
+    <h1>{{ page_name }}</h1>
+    {{ major_name }}
+    {{ question_one }}
+    {{ answer_one }}
+    {{ question_two }}
+    {{ answer_two }}
+    {{ question_three }}
+    {{ answer_three }}
+    {{ major_description }}
+{% endblock %}
