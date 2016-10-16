@@ -24,4 +24,5 @@ CREATE TABLE "women_info" (
 	"id" serial NOT NULL PRIMARY KEY,
 	"name" varchar(45) NOT NULL,
 	"major" varchar(55) NOT NULL,
+	"image" varchar() NOT NULL,
 );
