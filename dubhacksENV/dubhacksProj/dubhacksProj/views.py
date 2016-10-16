@@ -3,7 +3,10 @@ from django.shortcuts import render
 from django.db import connection
 
 def women(request):
-    return render(request, 'women.html', {'page_name': 'Women'})
+    cursor = connection.cursor()
+    cursor.execute('SELECT Name, Major, Image FROM dubhacksapp_personentry')
+    row = cursor.fetchall()
+    return render(request, 'women.html', {'page_name': 'Women', 'result': row})
 
 def hcde(request):
     return render(request, 'major.html', {'page_name': 'Human Centered Design & Engineering', 'major_description': 'Students in the Human Centered Design & Engineering Bachelor of Science program learn engineering principles rooted in a broad range of disciplines to investigate the interaction of people with technology and technical development.'})

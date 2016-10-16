@@ -4,48 +4,27 @@
 {% block content %}
     {% block grid %}
     <div class="container">
-        <div class="row row-grid" id="home">
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-        </div>
-        <div class="row row-grid">
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
+
+
+    <div class="row row-grid">
+        {% for personentry in result %}
+        <div class="col-xs-3">
+            <div class="portrait">
+                <figure>
+                    <img src="{% static 'dubhacksApp/images/' %}{{personentry.2}}" alt="{{personentry.0}}" class="img-responsive">
+                    <figcaption>
+                        <h2>{{personentry.0}}</h2>
+                        <span class="major">{{personentry.1}}</span>
+                    </figcaption>
+                </figure>
             </div>
         </div>
-        <div class="row row-grid">
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-            <div class="col-xs-3">
-                <img src="{% static 'dubhacksApp/images/portrait.png' %}" class="img-responsive" alt="portrait">
-            </div>
-        </div>
+
+        {% if forloop.counter|divisibleby:"4" and not forloop.last %}
+        </div><div class="row row-grid">
+        {% endif %}
+
+        {% endfor %}
     </div>
     {% endblock %}
 {% endblock %}
