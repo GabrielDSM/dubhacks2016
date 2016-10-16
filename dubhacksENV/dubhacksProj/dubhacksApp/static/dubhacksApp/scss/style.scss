@@ -1,3 +1,8 @@
+// Bootstrap reset
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
 $baseline: 4px;
 
 body {
@@ -6,8 +11,13 @@ body {
     line-height: 1.5;
 }
 
-footer {
+footer, h1, h2, h3 {
     text-align: center;
+}
+
+footer, .page-description {
+    padding-top: 12 * $baseline;
+    padding-bottom: 12 * $baseline;
 }
 
 h1, h2, h3 {
@@ -15,29 +25,55 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    font-size: 8 * $baseline;
+    margin-top: 4 * $baseline;
+    margin-bottom: 4 * $baseline;
 }
 
 h2 {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 6 * $baseline;
+    margin-top: 2 * $baseline;
+    margin-bottom: 2 * $baseline;
 }
 
 h3 {
-    font-size: 1.25rem;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
+    font-size: 5 * $baseline;
+    margin-top: $baseline;
+    margin-bottom: $baseline;
 }
 
 p {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 6 * $baseline;
+    margin-bottom: 6 * $baseline;
 }
 
 .row-grid {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 4 * $baseline;
+    padding-bottom: 4 * $baseline;
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    li {
+        float: left;
+        line-height: 6 * $baseline;
+
+        a {
+            display: block;
+            padding-top: 6 * $baseline;
+            padding-right: 8 * $baseline;
+            text-decoration: none;
+        }
+    }
+}
+
+#logo {
+    font-family: "brandon-grotesque";
+    font-size: 6 * $baseline;
 }
