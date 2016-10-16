@@ -4,8 +4,8 @@ from django.db import models
 
 
 class Woman(models.Model):
-	name = models.CharField(max_length = 45)
-	major = models.CharField(max_length = 55)
+	name = models.CharField(max_length=45)
+	major = models.CharField(max_length=55)
 	response1 = models.TextField()
 	response2 = models.TextField()
 	response3 = models.TextField()
@@ -15,14 +15,7 @@ class Woman(models.Model):
 
 
 class Major(models.Model):
-	title = models.CharField(max_length = 55)
+	title = models.CharField(max_length=55)
 	description = models.TextField()
-	link = CharField(max_length = 34)
+	link = models.CharField(max_length=35)
 
-
-CREATE TABLE "women_info" (
-	"id" serial NOT NULL PRIMARY KEY,
-	"name" varchar(45) NOT NULL,
-	"major" varchar(55) NOT NULL,
-	"image" varchar() NOT NULL,
-);
