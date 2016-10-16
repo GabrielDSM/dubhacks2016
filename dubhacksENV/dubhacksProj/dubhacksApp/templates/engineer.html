@@ -4,14 +4,44 @@
 {% block title %}{% endblock %}
 
 {% block general %}
-    {{ portrait_img }}
-    <h1>{{ page_name }}</h1>
-    {{ major_name }}
-    {{ question_one }}
-    {{ answer_one }}
-    {{ question_two }}
-    {{ answer_two }}
-    {{ question_three }}
-    {{ answer_three }}
-    {{ major_description }}
+    <div class="container">
+        <div class="row page-description text-center">
+            <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+                <img src="{% static 'dubhacksApp/images/' %}{{portrait_img}}" alt="" class="img-responsive">
+                <br>
+                <h1>{{ page_name }}</h1>
+                {{ major_name }}
+                <br>
+                <br>
+                <br>
+                <span class="question">
+                    What made you want to study your major?
+                </span>
+                <p>
+                {{ answer_one }}
+                </p>
+                <br>
+                <span class="question">
+                    What challenges have you faced in pursuing the major?
+                </span>
+
+                <p>
+                {{ answer_two }}
+                </p>
+                <br>
+                <span class="question">
+                    Do you have any advice from any women who are considering a major in STEM?
+                </span>
+
+
+                <p>
+                {{ answer_three }}
+                </p>
+                {{ major_description }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block grid %}
 {% endblock %}
